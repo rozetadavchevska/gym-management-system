@@ -1,0 +1,102 @@
+body{
+    margin:0 !important;
+    padding:0 !important;
+    box-sizing: border-box;
+    background-color: #2d2d2d;
+    color:#00ff66 !important;
+}
+
+li,a{
+    list-style: none !important;
+    text-decoration: none !important;
+    margin:5px;
+}
+
+a:hover{
+    color:white !important;
+}
+
+.nav-link{
+    font-weight: bold;
+}
+
+.navbar{
+    background-color: #2d2d2d !important;
+}
+
+.navbar-brand{
+    font-weight: bold;
+    color:#00ff66;
+}
+
+.login-page{
+    display: flex !important;
+    justify-content: center !important;
+    align-content: center !important;
+    margin: 100px;
+    padding: 20px;
+}
+
+.login{
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+    border-style:ridge;
+    border-color: #00ff66;
+    padding: 20px;
+}
+
+.login-form{
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.form-control{
+    border-radius: 0% !important;
+}
+
+.login-btn{
+    font-weight: bold !important;
+    background-color: #00ff66;
+    color: #2d2d2d;
+    align-self: center !important;
+    text-align: center;
+    border-radius: 0% !important;
+}
+
+.login-btn:hover{
+    background-color: #38fa86;
+    color: #2d2d2d;
+}
+
+.sidebar{
+    position: absolute;
+    left:0; 
+    background-color: #404040;
+    height:90.5%;
+}
+
+.sidebar-links, .sidebar-links>a{
+    background-color: #404040;
+    color:#909090 ;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+footer{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-copyright{
+    font-size: 12px;
+    text-align: center;
+}
