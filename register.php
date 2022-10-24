@@ -17,7 +17,7 @@
                 <input type="password" class="form-control" id="inputPassword">
             </div>
         </div>
-        <a class="" href="register">Already have an account? Sign Up!</a>
+        <a class="" href="register">Already have an account? Sign In!</a>
         <div class="login-btn">
             <input type="submit" class="btn submit-btn" name="submit-btn" value="Login">
         </div>

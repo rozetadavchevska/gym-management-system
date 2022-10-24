@@ -1,6 +1,4 @@
-<?php include 'header.php' ?>
-<?php include 'navbar.php' ?>
-    
+
     <div class="sidebar">
         <ul class="sidebar-items">
             <li class="sidebar-links">
@@ -23,7 +21,3 @@
             </li>
         </ul>
     </div>
-
-
-
-<?php include 'footer.php' ?>
