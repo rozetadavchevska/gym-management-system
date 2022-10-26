@@ -1,5 +1,12 @@
-<?php session_start(); ?>
-<?php include './model/database.php' ?>
+<?php
+    session_start();
+
+    if(isset($_SESSION['email'])){
+        header("Location: admin.php");
+    }
+
+?>
+
 <?php
     if($_SERVER["HTTPS"] != "on"){
         header("Location: https://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]);

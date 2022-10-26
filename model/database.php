@@ -6,8 +6,8 @@
 
     $data=mysqli_connect($host, $user, $password, $db);
 
-    if($data===false){
-        die("Connection Error");
+    if(!$data){
+        die("Connection Error" . mysqli_connect_error());
     }
 
 ?>

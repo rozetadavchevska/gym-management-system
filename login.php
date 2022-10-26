@@ -1,19 +1,28 @@
 <?php include 'view/header.php' ?>
 <?php include 'view/navbar.php' ?>
 
+<?php include './model/database.php' ?>
 
 <?php
-    
-    if(isset($_POST['email']) && !empty($_POST['email'])){
-        $email = $_POST['email'];
-        if(isset($_POST['password']) && !empty($_POST['password'])){
-            $password = $_POST['password'];
+    if(isset($_POST['submit'])){
+        if(isset($_POST['email']) && !empty($_POST['email'])){
+            $email = mysqli_real_escape_string($data, $_POST['email']);
+            if(isset($_POST['password']) && !empty($_POST['password'])){
+                $password = mysqli_real_escape_string($data, $_POST['password']);
+            } else {
+                $error = "Please enter password";
+            }
         } else {
-            $error = "Please enter password";
-        }
-    } else {
         $error = "Please enter email";
-    }
+        }
+
+        $query = " SELECT * FROM admin WHERE email = '{$email}' and password = '{$password}'";
+        $selectAdmin = mysqli_query($data, $query);
+
+        if(!$selectAdmin){
+            die("Try again." . mysqli_error($data));
+        }
+    } 
     
     // if(isset($_GET['session'])){
     //     if($_GET['session']=='end'){
@@ -44,12 +53,12 @@
                 </div>
                 <!-- <a class="" href="register">Don't have an account? Sign Up!</a> -->
                 
-                <input type="submit" class="btn login-btn" name="submit-btn" value="Login">
+                <button type="submit" class="btn login-btn" name="submit-btn">Login</button>
                 <p class="form-info">
                     <?php
                     if(isset($_POST['submit'])){
                         if(!empty($email) && !empty($password)){
-                            // check_user($email, $password);
+                            
                         } else {
                             echo $error;
                         }
