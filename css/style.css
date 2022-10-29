@@ -3,7 +3,7 @@ body{
     padding:0 !important;
     box-sizing: border-box;
     background-color: #2d2d2d;
-    color:#00ff66 !important;
+    color:#00ff66;
 }
 
 li,a{
@@ -18,15 +18,21 @@ a:hover{
 
 .nav-link{
     font-weight: bold;
+    color:#00ff66 !important;
 }
 
 .navbar{
+    display: flex;
     background-color: #2d2d2d !important;
 }
 
 .navbar-brand{
     font-weight: bold;
     color:#00ff66;
+}
+
+.nav{
+    display: flex;
 }
 
 .login-page{
@@ -70,6 +76,10 @@ a:hover{
 .login-btn:hover{
     background-color: #38fa86;
     color: #2d2d2d;
+}
+
+.displayError{
+    color: red;;
 }
 
 .sidebar{

@@ -1,36 +1,4 @@
-<?php include 'view/header.php' ?>
-<?php include 'view/navbar.php' ?>
-
-<?php include './model/database.php' ?>
-
-<?php
-    if(isset($_POST['submit'])){
-        if(isset($_POST['email']) && !empty($_POST['email'])){
-            $email = mysqli_real_escape_string($data, $_POST['email']);
-            if(isset($_POST['password']) && !empty($_POST['password'])){
-                $password = mysqli_real_escape_string($data, $_POST['password']);
-            } else {
-                $error = "Please enter password";
-            }
-        } else {
-        $error = "Please enter email";
-        }
-
-        $query = " SELECT * FROM admin WHERE email = '{$email}' and password = '{$password}'";
-        $selectAdmin = mysqli_query($data, $query);
-
-        if(!$selectAdmin){
-            die("Try again." . mysqli_error($data));
-        }
-    } 
-    
-    // if(isset($_GET['session'])){
-    //     if($_GET['session']=='end'){
-    //         end_session();
-    //     }
-    // }
-
- ?>
+<?php include 'view/header.php'; ?>
 
 <div class="login-page">
     <div class="login">
@@ -38,7 +6,8 @@
             <h3 class="mb-4">Login to Gym Title Management System</h3>
         </div>
         <div>
-            <form class="login-form" method="post" action="">
+            <form class="login-form" method="post" action="model/loginCheck.php">
+               
                 <div class="mb-3">
                     <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
                     <div class="form-input">
@@ -51,23 +20,17 @@
                         <input type="password" name="password" class="form-control" id="inputPassword">
                     </div>
                 </div>
-                <!-- <a class="" href="register">Don't have an account? Sign Up!</a> -->
-                
                 <button type="submit" class="btn login-btn" name="submit-btn">Login</button>
-                <p class="form-info">
-                    <?php
-                    if(isset($_POST['submit'])){
-                        if(!empty($email) && !empty($password)){
-                            
-                        } else {
-                            echo $error;
-                        }
-                    } 
-                    ?>
-                </p>
+                <span class="displayError">
+							<?php 
+                                if ($_SESSION['error']) {
+									echo $_SESSION['error'];
+								}
+							?>
+				</span>
             </form>
         </div>
     </div>
 </div>
 
-<?php include 'view/footer.php' ?>
+<?php include 'view/footer.php'; ?>
