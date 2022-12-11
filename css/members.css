@@ -1,0 +1,14 @@
+.members-table{
+    height:400px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.table, .col, .row{
+    color: #00ff66 !important;
+}
+
+.table-head{
+    color:#00ff66;
+    background-color: #181818;
+}

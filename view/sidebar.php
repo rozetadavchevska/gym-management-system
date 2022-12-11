@@ -1,4 +1,3 @@
-
     <div class="sidebar">
         <ul class="sidebar-items">
             <li class="sidebar-links">
