@@ -1,7 +1,15 @@
-<?php include 'view/header.php'; ?>
+<?php 
+    include 'view/header.php'; 
+    
+    if(isset($_GET['submit-btn'])){
+        header("Location: login.php");
+        exit();
+    }
+?>
 <style>
     <?php include 'css/login.css' ?>
 </style>
+
 
 <div class="login-page">
     <div class="login">
@@ -34,5 +42,7 @@
         </div>
     </div>
 </div>
+
+
 
 <?php include 'view/footer.php'; ?>

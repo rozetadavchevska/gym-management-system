@@ -1,8 +1,15 @@
 .add-member-btn{
     background-color: #00ff66 !important;
-    color:#2d2d2d;
+    color:#2d2d2d !important;
+    border-radius: 0% !important;
+    font-weight: bold !important;
 }
 
-.form-select{
+.add-member-btn:hover{
+    background-color: #38fa86 !important;
+    color: #2d2d2d !important;
+}
+
+.form-select, .form-control{
     border-radius: 0% !important;
 }
