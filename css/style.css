@@ -96,7 +96,7 @@ a:hover{
     padding: 10px;
 }
 
-.admin-home, .add-member, .members, .memberships, .schedule, .statistics{
+.admin-home, .add-member, .members, .memberships, .schedule, .statistics, .new-member-added{
     width: 1250px;
     height: 635px;
     margin-left: 220px;

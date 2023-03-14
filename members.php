@@ -1,7 +1,9 @@
 <?php include 'view/header.php' ?>
 <?php include 'view/sidebar.php' ?>
 <style>
-    <?php include 'css/members.css' ?>
+    <?php include 'css/members.css';
+          include 'css/style.css';
+    ?>
 </style>
 
 <div class="members container">

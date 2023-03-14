@@ -1,5 +1,5 @@
 <?php
-include 'database.php';
+require 'database.php';
 session_start();
 
 if(isset($_POST['email']) && isset($_POST['password'])){

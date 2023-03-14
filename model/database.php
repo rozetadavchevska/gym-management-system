@@ -6,9 +6,9 @@
     $password="";
     $db="gym-management-system";
 
-    foreach($connect as $key => $value){
-        define(strtoupper($key), $value);
-    }
+    // foreach($connect as $key => $value){
+    //     define(strtoupper($key), $value);
+    // }
 
     $data=mysqli_connect($host, $user, $password, $db);
 
