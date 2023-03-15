@@ -5,10 +5,31 @@
 }
 
 .table, .col, .row{
-    color: #00ff66 !important;
+    color: #ffffff !important;
 }
 
 .table-head{
     color:#00ff66;
     background-color: #181818;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: #00ff66;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #181818;
+}
+
+.icon{
+    text-align: center;
+}
+
+.edit-icon{
+    color:#0091ff;
+}
+
+.delete-icon{
+    color:#ff0000;
 }

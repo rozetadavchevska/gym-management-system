@@ -12,13 +12,13 @@ if(isset($_POST['member-submit'])){
 
     $query = "INSERT INTO members (`id`,`first name`, `last name`, `email`, `membership plan`, `address`, `city`, `date of birth`) 
                 VALUES('', '$fname', '$lname', '$email', '$membershipPlan', '$address', '$city', '$dateOfBirth')";
-    if(mysqli_query($data, $query)){
+    if(mysqli_query($conn, $query)){
         header("Location: ../newMemberAdded.php");
     } else {
-        echo "Error: " . $query . "<br>" . mysqli_error($data);
+        echo "Error: " . $query . "<br>" . mysqli_error($conn);
     }
 
-    mysqli_close($data);
+    mysqli_close($conn);
 }
 
 ?>

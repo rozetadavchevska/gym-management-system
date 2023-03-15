@@ -4,15 +4,15 @@ session_start();
 
 if(isset($_POST['email']) && isset($_POST['password'])){
     if(!empty($_POST['email'])){  
-        $email = mysqli_real_escape_string($data, $_POST['email']);
+        $email = mysqli_real_escape_string($conn, $_POST['email']);
         if( !empty($_POST['password'])){ 
-            $password = mysqli_real_escape_string($data, $_POST['password']);
+            $password = mysqli_real_escape_string($conn, $_POST['password']);
 
             $query = " SELECT * FROM admin WHERE email = '{$email}' AND password = '{$password}'";
-            $selectAdmin = mysqli_query($data, $query);
+            $selectAdmin = mysqli_query($conn, $query);
 
             if(!$selectAdmin){
-                die("Try again." . mysqli_error($data));
+                die("Try again." . mysqli_error($conn));
             }
 
             while($row = mysqli_fetch_assoc($selectAdmin)){
